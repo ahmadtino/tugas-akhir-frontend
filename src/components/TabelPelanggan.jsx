@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { serverHost } from '../server/server';
 
 const TabelPelanggan = ({data}) => {
     let i = 1;
@@ -11,7 +12,7 @@ const TabelPelanggan = ({data}) => {
     const navigate = useNavigate();
 
     const deleteData = async(id) => {
-        await axios.delete('http://localhost:5000/users/'+id)
+        await axios.delete(serverHost+'/users/'+id)
         .then(response => response.data)
         .then(data => {
             setMsg(data.msg);

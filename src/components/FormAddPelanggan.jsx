@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { serverHost } from '../server/server';
 
 const FormAddPelanggan = () => {
     const [fullname, setFullName] = useState("");
@@ -26,7 +27,7 @@ const FormAddPelanggan = () => {
     const postData = (e) => {
         e.preventDefault();
         setLoading(true);
-        axios.post("http://localhost:5000/users", {
+        axios.post(serverHost+"/users", {
             name: fullname,
             username,
             password,

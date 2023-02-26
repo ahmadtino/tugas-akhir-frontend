@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getMe } from '../features/authSlice';
 import axios from 'axios';
+import { serverHost } from '../server/server';
 
 const DataPelanggan = () => {
     const dispatch = useDispatch();
@@ -34,7 +35,7 @@ const DataPelanggan = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios.get("http://localhost:5000/users?role=pelanggan")
+        axios.get(serverHost+"/users?role=pelanggan")
         .then(response => response.data)
         .then(data => {
             setUserData(data);

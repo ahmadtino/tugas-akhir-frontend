@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
+import { serverHost } from '../server/server';
 
 const TabelPrediksiCuaca = ({data}) => {
     const [weathersData, setWeathersData] = useState(null);
@@ -12,7 +13,7 @@ const TabelPrediksiCuaca = ({data}) => {
     },[])
 
     const getWeathersData = async() => {
-        await axios.get(`http://localhost:5000/weathers?lat=${data.user.lat}&long=${data.user.long}`)
+        await axios.get(serverHost+`/weathers?lat=${data.user.lat}&long=${data.user.long}`)
         .then(response => setWeathersData(response.data))
     }
     

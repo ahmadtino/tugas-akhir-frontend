@@ -16,6 +16,7 @@ import ProfilBeban from '../components/ProfilBeban';
 import WeatherInfo from '../components/WeatherInfo';
 import TabelPrediksiCuaca from '../components/TabelPrediksiCuaca';
 import EnergiBiaya from '../components/EnergiBiaya';
+import { serverHost } from '../server/server';
 
 const DataKelistrikan = () => {
   const dispatch = useDispatch();
@@ -42,7 +43,7 @@ const DataKelistrikan = () => {
   const { userId } = useParams();
 
   const getData = async() => {
-    await axios.get("http://localhost:5000/edata?userId="+userId)
+    await axios.get(serverHost+"/edata?userId="+userId)
     .then(response => {
         setEdata(response.data);
         setSlicedData((response.data.length > 10) ? response.data.slice(-10) : response.data);

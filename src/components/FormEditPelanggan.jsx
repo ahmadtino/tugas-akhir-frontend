@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react'
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { serverHost } from '../server/server';
 
 const FormEditPelanggan = () => {
     const [fullname, setFullName] = useState(null);
@@ -22,7 +23,7 @@ const FormEditPelanggan = () => {
     const { uuid } = useParams();
 
     const getData = async() => {
-        axios.get('http://localhost:5000/users/'+uuid)
+        axios.get(serverHost+'/users/'+uuid)
         .then(response => response.data)
         .then(data => {
             setFullName(data && data.name);
