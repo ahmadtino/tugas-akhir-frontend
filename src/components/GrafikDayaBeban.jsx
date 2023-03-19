@@ -6,7 +6,7 @@ Chart.register(...registerables);
 
 const GrafikDayaBeban = ({data}) => {
     return (
-        <div style={{minHeight: '400px'}}>
+        <div style={{minHeight: '350px'}}>
             <Line 
                 data={{
                     labels: data.map(d => format(new Date(d.timestamp), 'kk:mm')),

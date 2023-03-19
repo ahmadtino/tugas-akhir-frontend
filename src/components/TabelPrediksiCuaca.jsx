@@ -18,7 +18,7 @@ const TabelPrediksiCuaca = ({data}) => {
     }
     
     return (
-        <table className="table text-center">
+        <table className="table text-center" style={{fontSize: '14px'}}>
             <thead className="thead-dark">
                 <tr>
                     <th scope="col">No</th>

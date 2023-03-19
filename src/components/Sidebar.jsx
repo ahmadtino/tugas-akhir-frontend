@@ -15,7 +15,7 @@ const Sidebar = (props) => {
     }
 
     return (
-        <nav className="nav flex-column" id="accordion">
+        <nav className="nav flex-column" id="accordion" style={{fontSize: '14px'}}>
 
             {
             user && user.role == "pln" ? 
@@ -36,7 +36,7 @@ const Sidebar = (props) => {
 
                 <a className="nav-link collapsed text-light" data-toggle="collapse" data-target="#collapseThree" href="#" role="button" aria-expanded="false" aria-controls="collapseThree" id="headingThree"><i class="fa-solid fa-wrench"></i><span className='ml-2'> Settings</span></a>
                 <div id="collapseThree" className={"collapse "+props.collapse.collapseThree} data-parent="#accordion" aria-labelledby="headingThree">
-                    <a className="nav-link text-light ml-4" href="#"><i className="fa-solid fa-gear" /> Ubah Password</a>
+                    <NavLink className={"nav-link text-light ml-4 "+props.active.UbahPassword} to="/ubah-pass"><i className="fa-solid fa-gear" /> Ubah Password</NavLink>
                     <a className="nav-link text-light ml-4" href="#" onClick={logOut}><i className="fa-solid fa-right-from-bracket"></i> Logout</a>
                 </div>
                 <span className="border-bottom border-secondary"></span>
@@ -51,9 +51,9 @@ const Sidebar = (props) => {
             {
             props.viewing ?
             <>
-                <div className='p-2'>
-                    <h5 className='font-weight-bold text-light text-center mt-3'>VIEWING</h5>
-                    <table className="table table-dark text-light mt-2">
+                <div className='p-1'>
+                    <h6 className='font-weight-bold text-light text-center mt-2'>VIEWING</h6>
+                    <table className="table table-dark text-light mt-3">
                         <tbody>
                             <tr>
                                 <th >Nama</th>

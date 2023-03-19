@@ -6,32 +6,32 @@ const ProfilBeban = ({data}) => {
         <div className='row'>
             <div className="col-sm-6 p-2">
                 <div style={{borderRadius: '5%'}} className="p-3 text-light bg-dark">
-                    <h5>POWER (W)</h5>
+                    <h6>POWER (W)</h6>
                     <hr className='bg-light'/>
-                    <h3>{data && data.p_load}</h3>
+                    <h4>{data && data.p_load}</h4>
                 </div>
             </div>
             <div className="col-sm-6 p-2">
                 <div style={{borderRadius: '5%'}} className="p-3 text-light bg-dark">
-                <h5>POWER FACTOR</h5>
+                <h6>POWER FACTOR</h6>
                 <hr className='bg-light'/>
-                <h3>{data && data.pf_load}</h3>
+                <h4>{data && data.pf_load}</h4>
                 </div>
             </div>
         </div>
         <div className='row'>
             <div className="col-sm-6 p-2">
                 <div style={{borderRadius: '5%'}} className="p-3 text-light bg-dark">
-                <h5>VOLTAGE (V)</h5>
+                <h6>VOLTAGE (V)</h6>
                 <hr className='bg-light'/>
-                <h3>{data && data.v_load}</h3>
+                <h4>{data && data.v_load}</h4>
                 </div>
             </div>
             <div className="col-sm-6 p-2">
                 <div style={{borderRadius: '5%'}} className="p-3 text-light bg-dark">
-                <h5>CURRENT (A)</h5>
+                <h6>CURRENT (A)</h6>
                 <hr className='bg-light'/>
-                <h3>{data && data.i_load}</h3>
+                <h4>{data && data.i_load}</h4>
                 </div>
             </div>
         </div>

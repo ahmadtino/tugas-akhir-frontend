@@ -30,7 +30,7 @@ const TabelPelanggan = ({data}) => {
     return (
         <div>
             {msg && (<p className={success ? 'text-success' : (error ? 'text-danger' : '')}>{msg}</p>)}
-            <table className="table text-center">
+            <table className="table text-center" style={{fontSize: '14px'}}>
                 <thead className="thead-dark">
                     <tr>
                         <th scope="col">No</th>

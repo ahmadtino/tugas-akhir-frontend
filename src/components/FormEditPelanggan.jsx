@@ -38,7 +38,7 @@ const FormEditPelanggan = () => {
     const updateData = async(e) => {
         e.preventDefault();
         setLoading(true);
-        axios.patch('http://localhost:5000/users/'+uuid, {
+        axios.patch(serverHost+'/users/'+uuid, {
             name: fullname,
             username,
             role,
@@ -66,7 +66,7 @@ const FormEditPelanggan = () => {
     },[])
 
     return (
-        <form onSubmit={updateData}>
+        <form onSubmit={updateData} style={{fontSize: '14px'}}>
             <p className='text-success'>{!error && successMsg}</p>
             <p className='text-danger'>{error && errorMsg}</p>
             <div className="form-group">

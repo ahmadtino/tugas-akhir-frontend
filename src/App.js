@@ -8,6 +8,7 @@ import EditPelanggan from './pages/EditPelanggan';
 import Login from './pages/Login';
 import TambahOperator from './pages/TambahOperator';
 import TambahPelanggan from './pages/TambahPelanggan';
+import UbahPassword from './pages/UbahPassword';
 import Welcome from './pages/Welcome';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/edit-pelanggan/:uuid" element={<EditPelanggan />}/>
         <Route path="/edit-operator/:uuid" element={<EditOperator />}/>
         <Route path="/data-listrik/:userId" element={<DataKelistrikan />}/>
+        <Route path="/ubah-pass" element={<UbahPassword />}/>
       </Routes>
     </BrowserRouter>
   </div>

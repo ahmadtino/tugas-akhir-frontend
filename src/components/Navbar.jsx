@@ -26,12 +26,12 @@ const Navbar = () => {
                 <ul className="navbar-nav ml-auto mr-5">
                     <li className="nav-item dropdown">
                     {user && 
-                    <a className="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a className="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{fontSize: '14px'}}>
                         <i className="fa-solid fa-user" />
                         <span className="ml-2">{user.name}</span>
                     </a>}
                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="dropdown-item" href="#"><i className="fa-solid fa-gear"></i> Ubah Password</a>
+                        <NavLink className="dropdown-item" href="#" to="/ubah-pass"><i className="fa-solid fa-gear"></i> Ubah Password</NavLink>
                         <div className="dropdown-divider"></div>
                         <a className="dropdown-item" onClick={logOut} href="#"><i className="fa-solid fa-right-from-bracket"></i> Logout</a>
                     </div>

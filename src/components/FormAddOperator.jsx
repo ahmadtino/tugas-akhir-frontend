@@ -49,7 +49,7 @@ const FormAddOperator = () => {
     }
 
     return (
-        <form onSubmit={postData}>
+        <form onSubmit={postData} style={{fontSize: '14px'}}>
             <p className='text-success'>{!error && successMsg}</p>
             <p className='text-danger'>{error && errorMsg}</p>
             <div className="form-group">
