@@ -86,7 +86,7 @@ const FormAddPelanggan = () => {
                 </div>
                 <div className="form-group col-md-6">
                     <label>Longitude</label>
-                    <input type="text" name="region" placeholder='Longitude' className="form-control" value={long} onChange={(e) => setLong(e.target.value)}/>
+                    <input type="text" name="longitude" placeholder='Longitude' className="form-control" value={long} onChange={(e) => setLong(e.target.value)}/>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Tambah Data</button>
